@@ -1,3 +1,4 @@
+
 #include <bits/stdc++.h>
 #define ll long long int
 #define vt vector
@@ -6,7 +7,7 @@ const unsigned int M = 1000000007;
 using namespace std;
 
 vt <string> qua;
-//umap <char,vt <char>> firstMap
+
 int prec(char c) {
     switch(c) {
         case '+':
@@ -85,8 +86,45 @@ void quatrup(string input){
     qua.push_back(input);
 }
 
-char chdig(char x){
-    isdigit(x)? return 'X'+x : return x ;
+string chdig(char x){
+	if(isdigit(x)){
+		string t="X";
+		t+=x;
+    	return t;
+	}
+	else{
+		string t(1, x);
+		return t;
+	}
+}
+
+string tchdig(char x){
+	if(isdigit(x)){
+		string t="(";
+		t+=x;
+        t+=")";
+    	return t;
+	}
+	else{
+		string t(1, x);
+		return t;
+	}
+}
+
+void trup(string input){
+    string temp;
+    int i=0;
+    while(input.size()>4){
+        if(input[i]=='*'|| input[i]=='/'|| input[i]=='+'|| input[i]=='-'){
+            temp=input.substr(i-2,3);
+            qua.push_back(temp);
+            input=input.substr(0,i-2)+to_string(qua.size())+input.substr(i+1,input.size());
+            i-=2;
+            //cout<<input<<" "<<temp<<"\n";
+        }
+        ++i;
+    }
+    qua.push_back(input);
 }
 
 int main() {
@@ -96,56 +134,31 @@ int main() {
     string input;
     vt<string> inp;
     while(std::getline(fp, input)){
-        string temp="";
-        for(int i=0;i<input.size();++i)
-            if(!(input[i]=='='|| input[i]==' '))
-                temp=temp+input[i];
-        temp = postfix(temp);
-        inp.push_back(temp);
+        input = postfix(input);
+        inp.push_back(input);
     }
     fp.close();
     for(int i=0;i<inp.size();++i){
-        cout<<inp[i]<<"\n";
+        //cout<<inp[i]<<"\n";
         quatrup(inp[i]);
     }
     cout<<"\nQuadruple: \n\n";
     cout<<"\toperator\toperand 1\toperand 2\t result\n";
     for (int i = 0; i < qua.size(); ++i){
         //cout<<qua.size()<<qua[i];
-         if(qua[i].size()==2)
-            cout<<"\t\t\t\t"<<qua[i][1]<<"\t"<<qua[i][0]<<"\n";
-        else if(qua[i].size()==4)
-            cout<<"\t"<<qua[i][3]<<"\t"<<qua[i][2]<<"\t"<<qua[i][1]<<"\t"<<qua[i][0]<<"\n";
+        if(qua[i].size()==4)
+            cout<<"\t\t"<<qua[i][3]<<"\t\t"<<chdig(qua[i][2])<<"\t\t"<<chdig(qua[i][1])<<"\t\t"<<qua[i][0]<<"\n";
         else
-            cout<<"\t"<<chdig(qua[i][2])<<"\t"<<qua[i][0]<<"\t"<<qua[i][1]<<"\tX"<<i+1<<"\n";
+            cout<<"\t\t"<<qua[i][2]<<"\t\t"<<chdig(qua[i][0])<<"\t\t"<<chdig(qua[i][1])<<"\t\tX"<<i+1<<"\n";
     }
-   
+    qua.clear();
+	for(int i=0;i<inp.size();++i){
+        //cout<<inp[i]<<"\n";
+        trup(inp[i]);
+    }
+	cout<<"\n\ntriple: \n\n";
+	cout<<"operator\toperand 1\toperand 2\t\n";
+    for (int i = 0; i < qua.size(); ++i)
+        cout<<"\t"<<qua[i][2]<<"\t\t"<<tchdig(qua[i][1])<<"\t\t"<<tchdig(qua[i][0])<<"\n";
     return 0;
 }
-
-/*
-a=b+c*c
-c=a+b-d
-a=c+b
-b=a
-
-replace 1 with x1
-1= c*c
-a= b+1
-2=a+b
-c=2-d
-a=c+b
-b=a
-
-.............
-
-a=2
-3=2+b
-c=4
-4=3-d
-a|=2
-a=5
-a=c+b
-b=a
-
-*/
