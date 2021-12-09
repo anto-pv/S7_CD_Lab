@@ -6,4 +6,6 @@ Design and implement a lexical analyzer for C language. Program should recognize
 
 :sparkles: [answer in C++](answer.cpp)
 
+:sparkles: [Next Experiment](../exp2/Question.md)
+
 :sparkles: [Other Experiments](../README.md)

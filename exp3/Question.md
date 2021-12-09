@@ -14,4 +14,6 @@ F → (E) / id
 
 :sparkles: [answer in C++](answer.cpp)
 
+:sparkles: [Next Experiment](../exp4/Question.md)
+
 :sparkles: [Other Experiments](../README.md)
