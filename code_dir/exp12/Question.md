@@ -7,4 +7,4 @@ Generate YACC specification for the implementation of simple calculator that per
 
 :sparkles: [First Experiment](../exp1/Question.md)
 
-:sparkles: [Other Experiments](.../README.md)
+:sparkles: [Other Experiments](/README.md)
