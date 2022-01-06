@@ -7,4 +7,4 @@ Write program to find First and Follow of any given grammar.
 
 :sparkles: [Next Experiment](../exp5/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)

@@ -16,4 +16,4 @@ F → (E) / id
 
 :sparkles: [Next Experiment](../exp4/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)

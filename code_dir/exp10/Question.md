@@ -7,4 +7,4 @@ Write program to convert NFA to DFA.
 
 :sparkles: [Next Experiment](../exp11/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)

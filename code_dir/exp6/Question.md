@@ -7,4 +7,4 @@ Implement the back end of the compiler which takes the three-address code and pr
 
 :sparkles: [Next Experiment](../exp7/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)

@@ -7,4 +7,4 @@ Implement Intermediate code generation for a given set of arithmetic expressions
 
 :sparkles: [Next Experiment](../exp6/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)

@@ -7,4 +7,4 @@ Implementation of Lexical Analyzer using Lex Tool to recognize tokens such as id
 
 :sparkles: [Next Experiment](../exp12/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)

@@ -7,4 +7,4 @@ Optimize intermediate code by Common Subexpression Elimination of basic blocks.
 
 :sparkles: [Next Experiment](../exp9/Question.md)
 
-:sparkles: [Other Experiments](../README.md)
+:sparkles: [Other Experiments](/README.md)
