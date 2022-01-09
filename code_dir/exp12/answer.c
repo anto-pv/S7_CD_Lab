@@ -1,4 +1,6 @@
 /*
+1. First copy the lex.l and yacc.y files with exact filename
+2. then
 drop these in terminal............... 
 yacc -d yacc.y
 lex lex.l
