@@ -27,4 +27,4 @@ Compiler Design Lab Programs under KTU syllabus
 
 :sparkles: [Experiment 12](code_dir/exp12/Question.md)
 
-::sparkles: [Lab Exam Sample Questions](code_dir/Lab.md)
+:sparkles: [Lab Exam Sample Questions](code_dir/Lab.md)
